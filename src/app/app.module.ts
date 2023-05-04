@@ -19,10 +19,12 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatListModule } from '@angular/material/list';
 
-
 import { HomeComponent } from './components/home/home.component';
 import { ProductsHeaderComponent } from './components/products-header/products-header.component';
 import { FiltersComponent } from './components/filters/filters.component';
+import { ProductBoxComponent } from './components/product-box/product-box.component';
+import { CartComponent } from './cart/cart.component';
+import { CartService } from './services/cart.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { FiltersComponent } from './components/filters/filters.component';
     HomeComponent,
     ProductsHeaderComponent,
     FiltersComponent,
+    ProductBoxComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,8 +52,9 @@ import { FiltersComponent } from './components/filters/filters.component';
     MatBadgeModule,
     MatSnackBarModule,
     MatListModule,
+    MatTableModule,
   ],
-  providers: [],
+  providers: [CartService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
