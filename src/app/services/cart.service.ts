@@ -50,7 +50,7 @@ export class CartService {
       }
       return _item;
     });
-    if (itemForRemoval) {
+    if (itemForRemoval) { 
       filteredItems = this.removeFromCart(itemForRemoval, false);
     }
     this.cart.next({ items: filteredItems });

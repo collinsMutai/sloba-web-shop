@@ -8,18 +8,19 @@ import { Product } from 'src/app/models/product.model';
 })
 export class ProductBoxComponent {
   @Input() fullwidthMode = false;
-  product: Product | undefined = {
-    id: 1,
-    title: 'Snickers',
-    price: 150,
-    category: 'shoes',
-    description: 'Description',
-    image: 'https://via.placeholder.com/150',
-  };
+  @Input() product: Product | undefined;
+  // product: Product | undefined = {
+  //   id: 1,
+  //   title: 'Snickers',
+  //   price: 150,
+  //   category: 'shoes',
+  //   description: 'Description',
+  //   image: 'https://via.placeholder.com/150',
+  // };
 
-  @Output() addToCart = new EventEmitter()
+  @Output() addToCart = new EventEmitter();
 
   onAddToCart(): void {
-    this.addToCart.emit(this.product)
+    this.addToCart.emit(this.product);
   }
 }
