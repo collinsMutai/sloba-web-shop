@@ -2,8 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from '../models/product.model';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
-const STORE_BASE_URL = 'https://fakestoreapi.com';
+
+const STORE_BASE_URL = environment.STORE_BASE_URL
 
 @Injectable({
   providedIn: 'root',
